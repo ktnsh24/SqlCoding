@@ -40,4 +40,5 @@ where c.grade >=200 and o.salesman_id = s.salesman_id and o.customer_id = c.cust
 --8. From the following table, write a SQL query to find those customers who placed orders on October 5, 2012. 
 -- Return customer_id, cust_name, city, grade, salesman_id, ord_no, purch_amt, ord_date, customer_id and salesman_id. 
 select  c.customer_id, c.cust_name, c.city, c.grade, c.salesman_id, o.ord_no, o.purch_amt, o.ord_date, o.customer_id, o.salesman_id
-from o.customer_id = c.customer_id and o.ord_date = '2012-10-05'
+from customer c, ord_no o
+where o.customer_id = c.customer_id and o.ord_date = '2012-10-05'
